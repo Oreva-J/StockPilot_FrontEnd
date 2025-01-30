@@ -50,3 +50,5 @@ const getProduct = async (id) => {
 }
 
 export default productServices
+
+// ENV Enabled
