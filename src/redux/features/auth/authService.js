@@ -100,7 +100,7 @@ export const logoutUser = async  ()=>{
 export const isUserLogin = async () => {
     try {
       const response = await axios.get(`${Backend_url}loggedin`, {withCredentials: true});
-  
+        console.log('url', Backend_url)
       // Check if the response status is 200 (OK)
       if (response.status === 200) {
         return response.data; // Return the data if successful
