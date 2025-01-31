@@ -99,7 +99,7 @@ export const logoutUser = async  ()=>{
 
 export const isUserLogin = async () => {
     try {
-      const response = await axios.get(`${Backend_url}/loggedin`, {withCredentials: true});
+      const response = await axios.get(`${Backend_url}loggedin`, {withCredentials: true});
   
       // Check if the response status is 200 (OK)
       if (response.status === 200) {
@@ -129,7 +129,7 @@ export const forgotPassword = async (email)=>{
         if(!email){
             return toast.error("please enter Email Address")
         }
-        await axios.post(`${Backend_url}/forgotpassword`, {email}, {withCredentials: true} )
+        await axios.post(`${Backend_url}forgotpassword`, {email}, {withCredentials: true} )
         toast.success("Success! Please cheack your mail")
         
     } catch (error) {
